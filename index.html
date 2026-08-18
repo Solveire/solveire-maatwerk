@@ -1408,6 +1408,38 @@
   @media(max-width:900px){.mobileMenuBtn{display:flex}}
   @media(max-width:600px){.actions .btn.lime{display:none!important}.mobileMenuBtn{display:flex;flex:0 0 42px}.thankYouScreen{padding:20px 2px 8px}.thankYouScreen h3{font-size:25px}}
 
+
+  /* COMPACT THANK-YOU STATE */
+  .modalCard.successState{
+    width:min(520px,100%);
+    padding:42px 34px 36px;
+  }
+  .modalCard.successState #formIntro,
+  .modalCard.successState #intakeForm{
+    display:none!important;
+  }
+  .modalCard.successState .thankYouScreen{
+    display:block!important;
+    padding:4px 0 0;
+  }
+  .modalCard.successState .thankYouIcon{
+    margin-top:0;
+    margin-bottom:18px;
+  }
+  .modalCard.successState .thankYouScreen h3{
+    margin-top:8px;
+  }
+  .modalCard.successState .thankYouScreen p{
+    max-width:390px;
+  }
+  @media(max-width:600px){
+    .modalCard.successState{
+      width:calc(100vw - 28px)!important;
+      max-width:calc(100vw - 28px)!important;
+      padding:34px 22px 28px;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -1749,7 +1781,7 @@
     <div class="modalCard" role="dialog" aria-modal="true" aria-labelledby="intakeTitle">
       <a class="modalClose" id="closeModalBtn" href="#" aria-label="Sluiten">✕</a>
 
-      <div class="modalHeader">
+      <div class="modalHeader" id="formIntro">
         <div class="kicker">Vrijblijvende projectcheck</div>
         <h3 class="modalTitle" id="intakeTitle">Vertel ons wat je wilt bouwen</h3>
         <p class="modalSubtitle">Geen lange intake. Geef ons de hoofdlijnen en je contactgegevens, dan nemen we persoonlijk contact met je op om te kijken wat technisch én commercieel de slimste aanpak is.</p>
@@ -1823,7 +1855,7 @@
         <div class="thankYouIcon">✓</div>
         <div class="kicker">Aanvraag ontvangen</div>
         <h3>Bedankt voor je aanvraag.</h3>
-        <p>We hebben je gegevens goed ontvangen. We nemen <strong>binnen 24 uur</strong> contact met je op om je project te bespreken.</p>
+        <p>We hebben je gegevens goed ontvangen. We nemen <strong>binnen 24 uur persoonlijk contact met je op</strong> om je project te bespreken.</p>
         <a class="btn lime thankYouClose" href="#">Sluiten</a>
       </div>
     </div>
@@ -1958,6 +1990,8 @@
 
         intakeForm.reset();
         intakeForm.hidden = true;
+        const modalCard = document.querySelector('.modalCard');
+        if (modalCard) modalCard.classList.add('successState');
         if (thankYouScreen) thankYouScreen.hidden = false;
       } catch (err) {
         formStatus.className = 'formStatus error';
@@ -1977,6 +2011,8 @@
         }
       }
       if (thankYouScreen) thankYouScreen.hidden = true;
+      const modalCard = document.querySelector('.modalCard');
+      if (modalCard) modalCard.classList.remove('successState');
       if (formStatus) {
         formStatus.className = 'formStatus';
         formStatus.textContent = '';
