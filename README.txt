@@ -1,14 +1,19 @@
-SOLVEIRE CUSTOM V6
+SOLVEIRE CUSTOM V8 — DISCORD FIX
 
-Voor een werkend formulier:
-1. Deploy de HELE map via Cloudflare Pages/GitHub.
-2. Voeg in Cloudflare Pages een secret toe met naam:
-   DISCORD_WEBHOOK_URL
-3. Vul daar je Discord webhook URL in.
-4. Deploy opnieuw.
+De Discord melding bevat nu alle formuliergegevens als gewone Discord-tekst.
+Daardoor zijn ze ook in de mobiele Discord-app altijd zichtbaar.
 
-Lokaal openen van index.html kan het formulier NIET naar Discord sturen,
-omdat /api/intake pas op Cloudflare Pages bestaat.
+Na aanpassen/deployen:
+1. Deploy de HELE map opnieuw via Cloudflare Pages/GitHub.
+2. Laat de bestaande secret DISCORD_WEBHOOK_URL staan.
+3. Doe daarna één nieuwe testaanvraag.
 
-Na succesvolle verzending verschijnt automatisch een bedankscherm:
-'We nemen binnen 24 uur contact met je op.'
+Verwachte Discord melding:
+- Project
+- Naam
+- Bedrijf
+- E-mail
+- Telefoon
+- Budget
+- Gewenste start
+- Volledige projectomschrijving
