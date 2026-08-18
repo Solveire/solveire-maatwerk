@@ -999,6 +999,415 @@
     .toolSpotlightCopy{padding:27px 23px 29px}
   }
 
+
+  /* MOBILE COMPATIBILITY FIX — hero/header/text overflow */
+  html, body{
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  @media(max-width:600px){
+    .wrap{
+      width:auto;
+      max-width:none;
+      margin-left:20px;
+      margin-right:20px;
+    }
+
+    nav .wrap{
+      margin-left:20px;
+      margin-right:20px;
+      width:auto;
+    }
+
+    .nav{
+      height:76px;
+      gap:12px;
+    }
+
+    .wordmark{
+      font-size:13px;
+      letter-spacing:.20em;
+      white-space:nowrap;
+      flex:0 0 auto;
+    }
+
+    .actions{
+      margin-left:auto;
+      gap:0;
+      min-width:0;
+    }
+
+    .actions > a.btn{
+      display:none;
+    }
+
+    .actions .btn.lime{
+      padding:12px 15px;
+      min-height:48px;
+      font-size:11px;
+      white-space:nowrap;
+    }
+
+    .hero{
+      padding:38px 0 48px;
+      overflow:hidden;
+    }
+
+    .heroGrid,
+    .heroContent{
+      min-width:0;
+      width:100%;
+      max-width:100%;
+    }
+
+    .heroContent{
+      padding:0 0 16px;
+    }
+
+    .kicker{
+      max-width:100%;
+      font-size:9px;
+      letter-spacing:.09em;
+      padding:7px 10px;
+      margin-bottom:16px;
+      white-space:normal;
+    }
+
+    .hero h1{
+      width:100%;
+      max-width:100%;
+      font-size:clamp(34px,9.6vw,39px) !important;
+      line-height:1.04 !important;
+      letter-spacing:-.045em !important;
+      margin:0 0 18px;
+      overflow-wrap:normal;
+      word-break:normal;
+      hyphens:none;
+    }
+
+    .hero h1 em{
+      display:inline;
+    }
+
+    .heroCopy{
+      width:100%;
+      max-width:100%;
+      font-size:15px !important;
+      line-height:1.62 !important;
+      margin-bottom:22px;
+      overflow-wrap:break-word;
+    }
+
+    .heroCtas{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+      width:100%;
+      margin-bottom:24px;
+    }
+
+    .heroCtas .btn{
+      width:100%;
+      max-width:100%;
+      min-height:52px;
+      padding:13px 16px;
+      font-size:12px;
+      justify-content:center;
+    }
+
+    .trust{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+      width:100%;
+    }
+
+    .trust span{
+      font-size:12px;
+      line-height:1.45;
+      min-width:0;
+    }
+
+    .heroVisual{
+      width:100%;
+      min-width:0;
+      min-height:360px;
+      overflow:hidden;
+    }
+
+    .heroPortrait{
+      max-width:100%;
+      height:360px;
+      object-fit:contain;
+      object-position:center bottom;
+    }
+
+    .founderCurve{
+      max-width:82vw;
+    }
+
+    .sectionHead{
+      max-width:100%;
+    }
+
+    .sectionHead h2{
+      font-size:32px !important;
+      line-height:1.08 !important;
+      letter-spacing:-.04em;
+      overflow-wrap:break-word;
+    }
+
+    .sectionHead p{
+      font-size:14px !important;
+      line-height:1.65 !important;
+    }
+
+    .premiumCopy h3,
+    .toolSpotlightCopy h3,
+    .finalCtaCard h2{
+      overflow-wrap:break-word;
+      word-break:normal;
+    }
+
+    .premiumCopy h3{
+      font-size:24px !important;
+      line-height:1.12 !important;
+    }
+
+    .toolSpotlightCopy h3{
+      font-size:25px !important;
+      line-height:1.12 !important;
+    }
+
+    .finalCtaCard h2{
+      font-size:31px !important;
+      line-height:1.08 !important;
+    }
+
+    .modalCard,
+    .compareMobileCard,
+    .premiumCase,
+    .toolSpotlight,
+    .calculatorWrap{
+      max-width:100%;
+      min-width:0;
+    }
+  }
+
+  @media(max-width:380px){
+    .wrap,
+    nav .wrap{
+      margin-left:16px;
+      margin-right:16px;
+    }
+
+    .wordmark{
+      font-size:12px;
+      letter-spacing:.17em;
+    }
+
+    .actions .btn.lime{
+      padding:11px 12px;
+      font-size:10px;
+    }
+
+    .hero h1{
+      font-size:33px !important;
+    }
+  }
+
+
+  /* NO-JS / IOS PREVIEW FALLBACK */
+  .modalOverlay:target{
+    opacity:1;
+    visibility:visible;
+  }
+  .modalOverlay:target .modalCard{
+    transform:translateY(0);
+  }
+
+  /* MOBILE V5 — conservative sizing to guarantee no horizontal crop */
+  @media(max-width:600px){
+    html,body{
+      width:100%;
+      max-width:100%;
+      overflow-x:clip;
+    }
+
+    .wrap,
+    nav .wrap{
+      width:calc(100% - 40px) !important;
+      max-width:calc(100% - 40px) !important;
+      margin-left:auto !important;
+      margin-right:auto !important;
+    }
+
+    .nav{
+      width:100%;
+      min-width:0;
+      height:72px;
+      gap:10px;
+    }
+
+    .wordmark{
+      font-size:12px !important;
+      letter-spacing:.19em !important;
+      min-width:0;
+    }
+
+    .actions{
+      min-width:0;
+      flex:0 0 auto;
+    }
+
+    .actions .btn.lime{
+      min-height:44px !important;
+      padding:10px 13px !important;
+      font-size:10.5px !important;
+      border-radius:11px !important;
+    }
+
+    .hero{
+      padding:34px 0 46px !important;
+    }
+
+    .heroGrid{
+      width:100%;
+      grid-template-columns:minmax(0,1fr) !important;
+    }
+
+    .heroContent{
+      width:100%;
+      min-width:0;
+      max-width:100%;
+      padding:0 0 12px !important;
+    }
+
+    .hero h1{
+      width:100%;
+      max-width:100%;
+      font-size:32px !important;
+      line-height:1.06 !important;
+      letter-spacing:-.038em !important;
+      margin:0 0 18px !important;
+      overflow-wrap:normal !important;
+      word-break:normal !important;
+    }
+
+    .hero h1 br{
+      display:none;
+    }
+
+    .hero h1 em{
+      display:block !important;
+      margin-top:2px;
+    }
+
+    .heroCopy{
+      width:100%;
+      max-width:100%;
+      font-size:14px !important;
+      line-height:1.62 !important;
+      margin-bottom:20px !important;
+    }
+
+    .heroCtas{
+      width:100%;
+      display:grid !important;
+      grid-template-columns:minmax(0,1fr) !important;
+      gap:9px !important;
+    }
+
+    .heroCtas .btn{
+      width:100% !important;
+      max-width:100% !important;
+      min-width:0 !important;
+      min-height:50px !important;
+      padding:12px 14px !important;
+      font-size:11.5px !important;
+      white-space:normal !important;
+      text-align:center;
+    }
+
+    .trust{
+      width:100%;
+      min-width:0;
+    }
+
+    .trust span{
+      width:100%;
+      font-size:11.5px !important;
+    }
+
+    .kicker{
+      max-width:100%;
+      font-size:8.5px !important;
+      line-height:1.3;
+    }
+
+    .sectionHead h2{
+      font-size:30px !important;
+      line-height:1.08 !important;
+    }
+
+    .sectionHead p{
+      font-size:13.5px !important;
+      line-height:1.62 !important;
+    }
+
+    .premiumCopy h3,
+    .toolSpotlightCopy h3{
+      font-size:23px !important;
+    }
+
+    .finalCtaCard h2{
+      font-size:29px !important;
+    }
+
+    .modalCard{
+      width:calc(100vw - 28px) !important;
+      max-width:calc(100vw - 28px) !important;
+      margin:auto;
+    }
+  }
+
+  @media(max-width:390px){
+    .wrap,
+    nav .wrap{
+      width:calc(100% - 32px) !important;
+      max-width:calc(100% - 32px) !important;
+    }
+
+    .hero h1{
+      font-size:30px !important;
+    }
+
+    .actions .btn.lime{
+      padding:9px 11px !important;
+      font-size:10px !important;
+    }
+  }
+
+
+  .mobileMenuBtn{display:none;width:42px;height:42px;padding:0;border:1px solid var(--line);border-radius:10px;background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer}
+  .mobileMenuBtn span{width:17px;height:1.5px;background:var(--green);display:block;border-radius:2px;transition:.2s}
+  .mobileMenuBtn.active span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+  .mobileMenuBtn.active span:nth-child(2){opacity:0}
+  .mobileMenuBtn.active span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+  .mobileMenu{display:none;padding:8px 20px 18px;border-top:1px solid rgba(231,231,224,.7);background:rgba(255,255,255,.98)}
+  .mobileMenu.active{display:grid}
+  .mobileMenu a{padding:13px 0;border-bottom:1px solid var(--line);color:var(--ink);font-size:13px;font-weight:600}
+  .mobileMenu a:last-child{border-bottom:0;color:#5e7c27}
+  .thankYouScreen{text-align:center;padding:26px 8px 12px}
+  .thankYouScreen[hidden]{display:none!important}
+  .thankYouIcon{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;margin:0 auto 18px;background:rgba(184,240,74,.22);color:var(--green);font-size:28px;font-weight:700;border:1px solid rgba(8,56,46,.12)}
+  .thankYouScreen h3{font-size:28px;line-height:1.1;letter-spacing:-.035em;margin:8px 0 12px}
+  .thankYouScreen p{max-width:430px;margin:0 auto 22px;color:var(--muted);font-size:14px;line-height:1.7}
+  .thankYouClose{min-width:190px}
+  @media(max-width:900px){.mobileMenuBtn{display:flex}}
+  @media(max-width:600px){.actions .btn.lime{display:none!important}.mobileMenuBtn{display:flex;flex:0 0 42px}.thankYouScreen{padding:20px 2px 8px}.thankYouScreen h3{font-size:25px}}
+
 </style>
 </head>
 <body>
@@ -1016,8 +1425,19 @@
       </div>
       <div class="actions">
         <a class="btn" href="https://www.solveire.nl">Bekijk onze software</a>
-        <button class="btn lime openModalBtn" type="button">Project inplannen →</button>
+        <a class="btn lime openModalBtn" href="#intakeModal">Project inplannen →</a>
+        <button class="mobileMenuBtn" id="mobileMenuBtn" type="button" aria-label="Menu openen" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
+    </div>
+    <div class="mobileMenu" id="mobileMenu" aria-hidden="true">
+      <a href="#werk">Werk</a>
+      <a href="#oplossingen">Oplossingen</a>
+      <a href="#calculator">Tool demo</a>
+      <a href="#vergelijking">Waarom maatwerk</a>
+      <a href="#werkwijze">Werkwijze</a>
+      <a href="https://www.solveire.nl">Bekijk onze software</a>
     </div>
   </nav>
 
@@ -1030,10 +1450,10 @@
         </div>
         <h1>Van website tot complete bedrijfssoftware.<br/><em>Gebouwd rond jouw bedrijf.</em></h1>
         <p class="heroCopy">
-          Geen losse templates of software waar jij je werkwijze op moet aanpassen. Solveire Custom bouwt premium websites, interactieve tools, klantportalen en bedrijfssoftware die precies aansluiten op hoe jouw organisatie werkt.
+          Geen losse templates of software waar jij je werkwijze op moet aanpassen. Wij bouwen premium websites, interactieve tools, klantportalen en bedrijfssoftware die aansluiten op hoe jouw organisatie werkt.
         </p>
         <div class="heroCtas">
-          <button class="btn lime openModalBtn" type="button">Plan een kennismaking →</button>
+          <a class="btn lime openModalBtn"  href="#intakeModal">Plan een kennismaking →</a>
           <a class="btn" href="#calculator">Bekijk Live Tool Demo</a>
         </div>
         <div class="trust">
@@ -1138,7 +1558,7 @@
         <span>We werken bewust met een beperkt aantal maatwerkprojecten tegelijk, zodat ieder project de aandacht krijgt die het nodig heeft. <strong>Nieuwe projectstart: beperkte ruimte beschikbaar.</strong></span>
       </div>
       <div>
-        <button class="btn lime openModalBtn" style="padding:7px 14px; font-size:10px;" type="button">Check beschikbaarheid →</button>
+        <a class="btn lime openModalBtn" style="padding:7px 14px; font-size:10px;"  href="#intakeModal">Check beschikbaarheid →</a>
       </div>
     </div>
   </div>
@@ -1227,7 +1647,7 @@
           <small>Geschatte Extra Jaaromzet</small>
           <strong id="outputExtraRevenue">€ 207.000</strong>
           <p>Direct gegenereerd door warme leads automatisch te kwalificeren.</p>
-          <button class="btn lime openModalBtn" style="width:100%;" type="button">Laat ons zo'n tool bouwen →</button>
+          <a class="btn lime openModalBtn" style="width:100%;"  href="#intakeModal">Laat ons zo'n tool bouwen →</a>
         </div>
       </div>
     </div>
@@ -1317,7 +1737,7 @@
         <h2 id="final-cta-title">Heb je een idee dat standaard software nét niet kan?</h2>
         <p>Vertel ons wat je wilt bouwen. We kijken met je mee naar de slimste route, welke onderdelen echt nodig zijn en hoe we er een sterke digitale oplossing van maken.</p>
         <div class="finalCtaActions">
-          <button class="btn lime openModalBtn" type="button">Bespreek je project met ons →</button>
+          <a class="btn lime openModalBtn"  href="#intakeModal">Bespreek je project met ons →</a>
           <span class="finalCtaNote">We werken bewust met een beperkt aantal maatwerkprojecten tegelijk, zodat ieder project de aandacht krijgt die het nodig heeft.</span>
         </div>
       </div>
@@ -1327,7 +1747,7 @@
   <!-- Pop-up Modal Formulier -->
   <div class="modalOverlay" id="intakeModal" aria-hidden="true">
     <div class="modalCard" role="dialog" aria-modal="true" aria-labelledby="intakeTitle">
-      <button class="modalClose" id="closeModalBtn" type="button" aria-label="Sluiten">✕</button>
+      <a class="modalClose" id="closeModalBtn" href="#" aria-label="Sluiten">✕</a>
 
       <div class="modalHeader">
         <div class="kicker">Vrijblijvende projectcheck</div>
@@ -1399,6 +1819,13 @@
         <button type="submit" class="btn lime formSubmit">Verstuur je project →</button>
         <div class="formStatus" id="formStatus" role="status" aria-live="polite"></div>
       </form>
+      <div class="thankYouScreen" id="thankYouScreen" hidden>
+        <div class="thankYouIcon">✓</div>
+        <div class="kicker">Aanvraag ontvangen</div>
+        <h3>Bedankt voor je aanvraag.</h3>
+        <p>We hebben je gegevens goed ontvangen. We nemen <strong>binnen 24 uur</strong> contact met je op om je project te bespreken.</p>
+        <a class="btn lime thankYouClose" href="#">Sluiten</a>
+      </div>
     </div>
   </div>
 
@@ -1419,7 +1846,7 @@
         <div class="footerLinks">
           <span>Solveire</span>
           <a href="https://www.solveire.nl">Bekijk onze software</a>
-          <button class="openModalBtn footerButton" type="button">Bespreek een project</button>
+          <a class="openModalBtn footerButton"  href="#intakeModal">Bespreek een project</a>
         </div>
       </div>
       <div class="footerBottom">
@@ -1443,7 +1870,7 @@
       });
     });
 
-    closeBtn.addEventListener('click', () => {
+    if (closeBtn) closeBtn.addEventListener('click', () => {
       modal.classList.remove('active');
       modal.setAttribute('aria-hidden', 'true');
     });
@@ -1485,13 +1912,33 @@
     rangeOrderValue.addEventListener('input', updateCalc);
     updateCalc();
 
+    // Mobiel menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const open = mobileMenu.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('active', open);
+        mobileMenuBtn.setAttribute('aria-expanded', String(open));
+        mobileMenu.setAttribute('aria-hidden', String(!open));
+      });
+      mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+      }));
+    }
+
     // Intakeformulier -> Cloudflare Pages Function -> Discord
     const intakeForm = document.getElementById('intakeForm');
     const formStatus = document.getElementById('formStatus');
+    const thankYouScreen = document.getElementById('thankYouScreen');
 
-    intakeForm.addEventListener('submit', async (e) => {
+    if (intakeForm) intakeForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const submitBtn = intakeForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
       submitBtn.disabled = true;
       submitBtn.textContent = 'Even versturen…';
       formStatus.className = 'formStatus';
@@ -1506,24 +1953,46 @@
           body: JSON.stringify(data)
         });
 
-        if (!response.ok) throw new Error('Versturen mislukt');
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || result.ok !== true) throw new Error(result.error || 'Versturen mislukt');
 
-        formStatus.className = 'formStatus success';
-        formStatus.textContent = 'Gelukt! Je aanvraag is binnen. We nemen zo snel mogelijk contact met je op.';
         intakeForm.reset();
-        setTimeout(() => {
-          modal.classList.remove('active');
-          modal.setAttribute('aria-hidden', 'true');
-          formStatus.textContent = '';
-        }, 2200);
+        intakeForm.hidden = true;
+        if (thankYouScreen) thankYouScreen.hidden = false;
       } catch (err) {
         formStatus.className = 'formStatus error';
-        formStatus.textContent = 'Dit ging niet goed. Probeer het nog een keer of neem rechtstreeks contact op.';
-      } finally {
+        formStatus.textContent = 'Versturen is niet gelukt. Probeer het opnieuw of mail naar info@solveire.nl.';
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Verstuur je project →';
+        submitBtn.textContent = originalText;
       }
     });
+
+    function resetIntakeView() {
+      if (intakeForm) {
+        intakeForm.hidden = false;
+        const submitBtn = intakeForm.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Verstuur je project →';
+        }
+      }
+      if (thankYouScreen) thankYouScreen.hidden = true;
+      if (formStatus) {
+        formStatus.className = 'formStatus';
+        formStatus.textContent = '';
+      }
+    }
+
+    document.querySelectorAll('.thankYouClose').forEach(btn => {
+      btn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+        resetIntakeView();
+      });
+    });
+
+    openBtns.forEach(btn => btn.addEventListener('click', resetIntakeView));
   </script>
 
 </body>
