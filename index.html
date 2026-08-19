@@ -1439,9 +1439,18 @@
       padding:34px 22px 28px;
     }
   }
+  
+  /* Juridische footerlink: bewust rustig en niet vet */
+  .premiumFooter .footerLinks a[href^="algemene-voorwaarden"],
+  .premiumFooter .footerLinks a[href^="privacy"]{
+    font-weight:400;
+    color:#afc0b9;
+  }
+  .premiumFooter .footerLinks a[href^="algemene-voorwaarden"]:hover,
+  .premiumFooter .footerLinks a[href^="privacy"]:hover{
+    color:#eef4f1;
+  }
 
-
-  /* SUBTIELE PRIJSINDICATIE */
 </style>
 </head>
 <body>
@@ -1833,7 +1842,6 @@
             <label for="budget">Indicatief budget</label>
             <select id="budget" name="budget" class="formSelect">
               <option value="Nog niet bepaald">Nog niet bepaald</option>
-              <option value="Tot €1.000">Tot €1.000</option>
               <option value="€1.000 – €2.500">€1.000 – €2.500</option>
               <option value="€2.500 – €5.000">€2.500 – €5.000</option>
               <option value="€5.000 – €10.000">€5.000 – €10.000</option>
@@ -1870,7 +1878,6 @@
       <div class="footerTop">
         <div class="footerBrand">
           <strong>SOLVEIRE</strong>
-          <span>Custom Development</span>
           <p>Maatwerk websites, tools, portalen en bedrijfssoftware.</p>
         </div>
         <div class="footerContact">
@@ -1882,6 +1889,8 @@
           <span>Solveire</span>
           <a href="https://www.solveire.nl">Bekijk onze software</a>
           <a class="openModalBtn footerButton"  href="#intakeModal">Bespreek een project</a>
+          <a href="algemene-voorwaarden/">Algemene voorwaarden</a>
+          <a href="privacy/">Privacy</a>
         </div>
       </div>
       <div class="footerBottom">
