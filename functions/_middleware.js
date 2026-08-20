@@ -1,29 +1,7 @@
-const SOLVEIRE_PUBLIC_STYLES = `
-/* Shared Solveire public readability layer */
-html{font-size:16px}
-body{font-family:'Poppins',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-body p{font-size:15px;line-height:1.7}
-body label{font-size:13px;line-height:1.45;font-weight:600}
-body input,body textarea,body select{font-size:15px;line-height:1.5}
-body button,body .btn,body a.btn{font-size:14px;line-height:1.35;font-weight:600}
-body small,body .eyebrow,body .kicker,body .badge,body .tag{font-size:12px;line-height:1.45}
-body h1{font-weight:600;line-height:1.08;letter-spacing:-.045em}
-body h2{font-weight:600;line-height:1.14;letter-spacing:-.035em}
-body h3{font-weight:600;line-height:1.2;letter-spacing:-.025em}
-body nav a,body header a{font-size:14px}
-@media(max-width:760px){html{font-size:16px}body p{font-size:15px}body button,body .btn,body a.btn{font-size:14px}body input,body textarea,body select{font-size:16px}body label{font-size:13px}body small,body .eyebrow,body .kicker,body .badge,body .tag{font-size:12px}}
+const SOLVEIRE_PUBLIC_STYLES=`
+html{font-size:16px}body{font-family:'Poppins',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif!important;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body p,body .intro,body .subtext,body .lead{font-size:16px!important;line-height:1.7!important}body label{font-size:13px!important;line-height:1.45!important;font-weight:600!important}body input,body textarea,body select{font-size:15px!important;line-height:1.5!important}body button,body .btn,body a.btn{font-size:14px!important;line-height:1.35!important;font-weight:600!important}body small,body .eyebrow,body .kicker,body .badge,body .tag{font-size:12px!important;line-height:1.45!important}body h1{font-weight:600!important;line-height:1.08!important;letter-spacing:-.045em!important}body h2{font-weight:600!important;line-height:1.14!important;letter-spacing:-.035em!important}body h3{font-weight:600!important;line-height:1.2!important;letter-spacing:-.025em!important}body nav a,body header a{font-size:14px!important}
+@media(min-width:901px){body p,body .intro,body .subtext,body .lead{font-size:17px!important}.hero p,[class*="hero"] p{font-size:18px!important}.section p{font-size:16.5px!important}}
+@media(max-width:760px){body p,body .intro,body .subtext,body .lead{font-size:15px!important}body input,body textarea,body select{font-size:16px!important}body [class*="card"],body [class*="panel"]{min-height:0!important}body [class*="card"]{padding-top:min(18px,5vw)!important;padding-bottom:min(18px,5vw)!important}}
 `;
-
-export async function onRequest(context) {
-  const response = await context.next();
-  const type = response.headers.get('content-type') || '';
-  if (!type.includes('text/html')) return response;
-
-  return new HTMLRewriter()
-    .on('head', {
-      element(element) {
-        element.append(`<style>${SOLVEIRE_PUBLIC_STYLES}</style>`, { html: true });
-      }
-    })
-    .transform(response);
-}
+export async function onRequest(context){const response=await context.next();const type=response.headers.get('content-type')||'';if(!type.includes('text/html'))return response;return new HTMLRewriter().on('head',{element(element){element.append(`<style>${SOLVEIRE_PUBLIC_STYLES}</style>`,{html:true})}}).transform(response)}
