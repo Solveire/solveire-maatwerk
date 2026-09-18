@@ -317,180 +317,84 @@ p{margin:0 0 18px}
 }
 
 
-/* Founder photography v3 — true section backgrounds */
-.hero-media{
-  min-height:610px;
-  overflow:visible;
-  background:
-    linear-gradient(90deg,rgba(255,255,255,0) 0 48%,rgba(255,255,255,.88) 74%,#fff 100%),
-    linear-gradient(180deg,rgba(255,255,255,0) 0 80%,#fff 100%),
-    radial-gradient(circle at 32% 50%,rgba(201,255,61,.16),transparent 34%);
+
+/* Founder photography v4 — restrained editorial usage */
+.hero-grid{grid-template-columns:1.04fr .96fr;gap:58px}
+.hero-media{min-height:540px;background:none;overflow:visible}
+.hero-media .software-backdrop{inset:28px 0 58px 12px}
+.hero-media .visual-panel.small{right:-2px;bottom:0;width:48%}
+.hero-orbit-one{width:390px;height:390px;right:18px;top:58px}
+.hero-orbit-two{width:250px;height:250px;right:90px;top:128px}
+.hero-founder{display:none!important}
+
+/* One deliberate founder image on Home */
+.founder-story{background:var(--emerald-deep);padding:0}
+.founder-story-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:0;min-height:560px;align-items:stretch}
+.founder-story .founder-work{
+  min-height:560px;
+  margin:0;
+  width:auto;
+  overflow:hidden;
+  background:#0b4034;
+  border:0;
+  visibility:visible;
 }
-.hero-founder{
-  left:-8px;
-  bottom:0;
-  width:min(46%,315px);
-  max-height:565px;
-  object-fit:contain;
-  filter:drop-shadow(0 22px 26px rgba(7,55,46,.10));
+.founder-story .founder-work img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:560px;
+  object-fit:cover;
+  object-position:center 36%;
+  filter:none;
   -webkit-mask-image:none;
   mask-image:none;
 }
-.hero-media:before{
-  content:"";
-  position:absolute;
-  z-index:2;
-  left:-34px;
-  bottom:-2px;
-  width:390px;
-  height:150px;
-  background:linear-gradient(to top,#fff 8%,rgba(255,255,255,.90) 38%,transparent 100%);
-  pointer-events:none;
-}
-.hero-media:after{display:none}
-.hero-media .software-backdrop{z-index:1;inset:58px 0 82px 94px}
-.hero-note{z-index:4;background:#fff!important;backdrop-filter:none}
-
-/* Home founder story: image is part of the emerald section itself */
-.founder-story{
-  position:relative;
-  overflow:hidden;
-  background:
-    linear-gradient(90deg,rgba(7,55,46,.10) 0%,rgba(7,55,46,.62) 46%,var(--emerald-deep) 67%),
-    url('/assets/photos/work-laptop.webp') left center/52% auto no-repeat,
-    var(--emerald-deep);
-}
-.founder-story-grid{
-  grid-template-columns:1fr 1fr;
-  gap:0;
-  min-height:620px;
-}
-.founder-story .founder-work{visibility:hidden;min-height:620px;background:none;border:0}
-.founder-story .founder-work img{display:none}
 .founder-story .founder-work:after{display:none}
-.founder-story-copy{padding:78px 0 78px 58px;align-self:center;position:relative;z-index:2}
+.founder-story-copy{padding:74px 72px;align-self:center;max-width:none}
+.founder-story .founder-quote{max-width:540px}
 
-/* Shared subpage photography: photos are now actual background layers */
-.visual-story{
-  position:relative;
-  overflow:hidden;
-  background:#fff;
-}
-.visual-story-grid{
-  min-height:560px;
-  gap:58px;
-}
-.photo-stage{
-  min-height:560px;
-  border:0!important;
-  background-color:transparent!important;
-  overflow:hidden;
-}
-.photo-stage img{display:none!important}
-.photo-stage:after,.photo-stage:before{display:none!important}
-.photo-ui-card{display:none!important}
-
-.photo-bg-work{
-  background:
-    linear-gradient(90deg,#fff 0%,rgba(255,255,255,.96) 30%,rgba(255,255,255,.58) 51%,rgba(255,255,255,0) 72%),
-    url('/assets/photos/work-laptop.webp') right center/55% auto no-repeat;
-}
-.photo-bg-portrait{
-  background:
-    linear-gradient(270deg,#fff 0%,rgba(255,255,255,.95) 28%,rgba(255,255,255,.52) 50%,rgba(255,255,255,0) 72%),
-    url('/assets/photos/portrait-close.webp') left center/53% auto no-repeat;
-}
-.photo-bg-work .visual-story-grid,
-.photo-bg-portrait .visual-story-grid{position:relative}
-.photo-bg-work .photo-stage,
-.photo-bg-portrait .photo-stage{visibility:hidden}
-
-/* Homepage lower CTA: portrait becomes a soft left-side background */
-.founder-cta{
-  position:relative;
-  overflow:hidden;
-  background:
-    linear-gradient(90deg,rgba(255,255,255,0) 0 28%,rgba(255,255,255,.70) 43%,#fff 61%),
-    linear-gradient(0deg,#fff 0%,rgba(255,255,255,0) 28%),
-    url('/assets/photos/portrait-close.webp') left 18% center/43% auto no-repeat,
-    #fff;
-}
-.founder-cta-grid{grid-template-columns:.78fr 1.22fr;gap:54px}
-.founder-cta .founder-portrait-wrap{visibility:hidden;min-height:560px;background:none}
-.founder-cta .founder-portrait-wrap img{display:none}
-.founder-cta .founder-portrait-wrap:after{display:none}
-
-/* About: same editorial treatment, no hard image box */
+/* One deliberate portrait on About */
 .two-col .founder-portrait-wrap{
-  background:
-    linear-gradient(90deg,rgba(255,255,255,0) 0 70%,#fff 100%),
-    linear-gradient(0deg,#fff 0%,rgba(255,255,255,0) 24%),
-    url('/assets/photos/portrait-close.webp') center top/cover no-repeat;
-  min-height:540px;
-  max-width:480px;
+  max-width:470px;
+  min-height:0;
+  background:#efeae4;
   overflow:hidden;
 }
-.two-col .founder-portrait-wrap img{display:none}
+.two-col .founder-portrait-wrap img{
+  display:block;
+  width:100%;
+  aspect-ratio:4/5;
+  height:auto;
+  object-fit:cover;
+  object-position:center top;
+  -webkit-mask-image:none;
+  mask-image:none;
+}
 .two-col .founder-portrait-wrap:after{display:none}
-.founder-caption{margin-top:8px}
+.founder-caption{margin-top:14px}
 
-/* Contact: image sits behind the section, not in a separate panel */
-.contact-intro{
-  position:relative;
-  overflow:hidden;
-  background:
-    linear-gradient(90deg,rgba(255,255,255,0) 0 26%,rgba(255,255,255,.72) 44%,#fff 63%),
-    linear-gradient(0deg,#fff 0%,rgba(255,255,255,0) 25%),
-    url('/assets/photos/portrait-close.webp') left center/41% auto no-repeat,
-    #fff;
-}
-.contact-photo{visibility:hidden;min-height:520px}
-.contact-photo img{display:none}
+/* Retire experimental photo treatments */
+.visual-story,.photo-bg-work,.photo-bg-portrait,.contact-intro,.work-founder-band{background:none}
+.photo-stage,.contact-photo{display:none}
+.founder-cta{background:none}
+.founder-cta .founder-portrait-wrap{display:none}
+
+/* contact stays intentionally clean */
+.contact-photo-grid{display:block}
+.contact-intro{display:none!important}
 
 @media(max-width:900px){
-  .founder-story{
-    background:
-      linear-gradient(0deg,var(--emerald-deep) 0 46%,rgba(7,55,46,.15) 78%,rgba(7,55,46,.08) 100%),
-      url('/assets/photos/work-laptop.webp') top center/100% auto no-repeat,
-      var(--emerald-deep);
-  }
-  .founder-story-grid{grid-template-columns:1fr;min-height:760px}
-  .founder-story .founder-work{min-height:360px}
-  .founder-story-copy{padding:30px 0 68px}
-  .photo-bg-work,
-  .photo-bg-portrait{
-    background:
-      linear-gradient(0deg,#fff 0 44%,rgba(255,255,255,.18) 72%,rgba(255,255,255,0) 100%),
-      url('/assets/photos/work-laptop.webp') top center/100% auto no-repeat;
-  }
-  .photo-bg-portrait{
-    background:
-      linear-gradient(0deg,#fff 0 44%,rgba(255,255,255,.18) 72%,rgba(255,255,255,0) 100%),
-      url('/assets/photos/portrait-close.webp') top center/100% auto no-repeat;
-  }
-  .visual-story-grid{min-height:720px;align-content:end;padding-top:330px}
-  .founder-cta{
-    background:
-      linear-gradient(0deg,#fff 0 48%,rgba(255,255,255,.12) 75%,rgba(255,255,255,0) 100%),
-      url('/assets/photos/portrait-close.webp') top center/100% auto no-repeat,
-      #fff;
-  }
-  .founder-cta-grid{grid-template-columns:1fr;padding-top:330px}
-  .founder-cta .founder-portrait-wrap{display:none}
-  .contact-intro{
-    background:
-      linear-gradient(0deg,#fff 0 48%,rgba(255,255,255,.12) 75%,transparent 100%),
-      url('/assets/photos/portrait-close.webp') top center/100% auto no-repeat,
-      #fff;
-  }
-  .contact-photo-grid{padding-top:320px}
-  .contact-photo{display:none}
+  .founder-story-grid{grid-template-columns:1fr}
+  .founder-story .founder-work{min-height:430px}
+  .founder-story .founder-work img{min-height:430px}
+  .founder-story-copy{padding:52px 0}
 }
 @media(max-width:560px){
-  .hero-media{min-height:440px}
-  .hero-founder{width:47%;max-width:185px}
-  .hero-media .software-backdrop{inset:54px 0 62px 40px}
-  .hero-media:before{width:230px;height:110px;left:-20px}
-  .visual-story-grid{padding-top:270px;min-height:650px}
-  .founder-cta-grid,.contact-photo-grid{padding-top:270px}
+  .hero-media{min-height:390px}
+  .hero-media .software-backdrop{inset:18px 0 48px 0}
+  .hero-media .visual-panel.small{width:62%}
+  .founder-story .founder-work{min-height:360px}
+  .founder-story .founder-work img{min-height:360px}
+  .founder-story-copy{padding:42px 0 54px}
 }
