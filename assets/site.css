@@ -1273,3 +1273,72 @@ p{margin:0 0 18px}
   .oldstyle-photo-wrap{width:43%;height:282px;top:12px}
   .oldstyle-orbit{width:268px;height:268px;right:-70px}
 }
+
+/* Final founder scale adjustment — 2026-09-19 */
+@media(min-width:901px){
+  .premium-hero-visual{
+    min-height:680px;
+  }
+  .premium-software-frame{
+    width:78%;
+    left:0;
+    top:108px;
+  }
+  .oldstyle-photo-wrap{
+    width:45%;
+    height:680px;
+    right:20px;
+    top:18px;
+  }
+}
+
+@media(max-width:900px) and (min-width:561px){
+  .premium-hero-visual{
+    min-height:535px;
+  }
+  .premium-software-frame{
+    width:86%;
+    left:0;
+    top:76px;
+  }
+  .oldstyle-photo-wrap{
+    width:44%;
+    height:500px;
+    right:8px;
+    top:18px;
+  }
+}
+
+@media(max-width:560px){
+  .premium-hero-visual{
+    min-height:410px;
+    margin-top:8px;
+  }
+  .premium-software-frame{
+    width:91%;
+    left:-1%;
+    top:56px;
+  }
+  .oldstyle-photo-wrap{
+    width:49%;
+    height:350px;
+    right:-5px;
+    top:8px;
+  }
+}
+
+@media(max-width:390px){
+  .premium-hero-visual{
+    min-height:385px;
+  }
+  .premium-software-frame{
+    width:92%;
+    top:54px;
+  }
+  .oldstyle-photo-wrap{
+    width:51%;
+    height:328px;
+    right:-7px;
+    top:8px;
+  }
+}
