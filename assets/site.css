@@ -1188,3 +1188,88 @@ p{margin:0 0 18px}
     top:22px;
   }
 }
+
+
+/* Hero polish — clean uploaded assets */
+.oldstyle-hero{
+  background:
+    radial-gradient(circle at 79% 39%,rgba(224,239,214,.78),transparent 30%),
+    linear-gradient(110deg,#fcfdfb 0%,#f8faf5 48%,#eef5e9 100%);
+}
+.oldstyle-hero-grid{
+  min-height:700px;
+  grid-template-columns:minmax(0,.9fr) minmax(590px,1.1fr);
+  gap:34px;
+}
+.premium-hero-visual{min-height:660px}
+.oldstyle-orbit{
+  width:575px;
+  height:575px;
+  right:6px;
+  top:42px;
+  background:radial-gradient(circle,rgba(231,243,222,.62),rgba(248,251,246,.12) 68%,transparent 69%);
+}
+.premium-software-frame{
+  left:0;
+  top:102px;
+  width:81%;
+  max-width:760px;
+  border-radius:12px;
+  box-shadow:0 28px 68px rgba(31,48,38,.14);
+}
+.premium-software-frame img{
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  background:#f4eee6;
+}
+.oldstyle-photo-wrap{
+  right:-6px;
+  top:52px;
+  width:38%;
+  height:585px;
+}
+.oldstyle-photo-wrap img{
+  object-fit:contain!important;
+  object-position:bottom right!important;
+}
+@media(max-width:1180px){
+  .oldstyle-hero-grid{grid-template-columns:minmax(0,.95fr) minmax(520px,1.05fr)}
+  .premium-software-frame{width:82%}
+  .oldstyle-photo-wrap{width:39%;height:550px}
+}
+@media(max-width:900px){
+  .oldstyle-hero-copy{padding:58px 0 18px}
+  .premium-hero-visual{min-height:500px}
+  .premium-software-frame{width:88%;top:68px}
+  .oldstyle-photo-wrap{width:38%;height:430px;top:32px}
+  .oldstyle-orbit{width:430px;height:430px;top:18px;right:-42px}
+}
+@media(max-width:560px){
+  .oldstyle-hero-copy{padding:28px 0 4px}
+  .premium-hero-visual{min-height:355px;margin-top:8px}
+  .premium-software-frame{
+    width:92%;
+    left:-1%;
+    top:42px;
+    border-radius:9px;
+    box-shadow:0 18px 42px rgba(31,48,38,.13);
+  }
+  .oldstyle-photo-wrap{
+    width:41%;
+    height:300px;
+    right:-3px;
+    top:14px;
+  }
+  .oldstyle-orbit{
+    width:286px;
+    height:286px;
+    right:-68px;
+    top:0;
+  }
+}
+@media(max-width:390px){
+  .premium-hero-visual{min-height:332px}
+  .premium-software-frame{width:93%;top:40px}
+  .oldstyle-photo-wrap{width:43%;height:282px;top:12px}
+  .oldstyle-orbit{width:268px;height:268px;right:-70px}
+}
