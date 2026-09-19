@@ -1342,3 +1342,38 @@ p{margin:0 0 18px}
     top:8px;
   }
 }
+
+
+/* Founder visual scale correction — 2026-09-19 */
+/* The PNG contains substantial transparent side padding, so scale the image itself,
+   not only its wrapper. This makes the visible founder materially larger. */
+@media(min-width:901px){
+  .oldstyle-photo-wrap img{
+    transform:scale(1.42)!important;
+    transform-origin:bottom right!important;
+  }
+  .oldstyle-photo-wrap{
+    right:8px;
+  }
+}
+
+@media(max-width:900px) and (min-width:561px){
+  .oldstyle-photo-wrap img{
+    transform:scale(1.36)!important;
+    transform-origin:bottom right!important;
+  }
+}
+
+@media(max-width:560px){
+  .oldstyle-photo-wrap img{
+    transform:scale(1.30)!important;
+    transform-origin:bottom right!important;
+  }
+}
+
+@media(max-width:390px){
+  .oldstyle-photo-wrap img{
+    transform:scale(1.27)!important;
+    transform-origin:bottom right!important;
+  }
+}
