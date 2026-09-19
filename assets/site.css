@@ -1377,3 +1377,41 @@ p{margin:0 0 18px}
     transform-origin:bottom right!important;
   }
 }
+
+/* Founder visible-size hard override — 2026-09-19 */
+@media(min-width:901px){
+  .oldstyle-photo-wrap{
+    width:46%!important;
+    height:700px!important;
+    right:-8px!important;
+    top:4px!important;
+  }
+  .oldstyle-photo-wrap img{
+    transform:scale(1.68)!important;
+    transform-origin:bottom right!important;
+  }
+}
+@media(max-width:900px) and (min-width:561px){
+  .oldstyle-photo-wrap{
+    width:46%!important;
+    height:520px!important;
+    right:-4px!important;
+    top:6px!important;
+  }
+  .oldstyle-photo-wrap img{
+    transform:scale(1.52)!important;
+    transform-origin:bottom right!important;
+  }
+}
+@media(max-width:560px){
+  .oldstyle-photo-wrap{
+    width:50%!important;
+    height:365px!important;
+    right:-8px!important;
+    top:0!important;
+  }
+  .oldstyle-photo-wrap img{
+    transform:scale(1.42)!important;
+    transform-origin:bottom right!important;
+  }
+}
