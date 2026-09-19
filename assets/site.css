@@ -1274,3 +1274,91 @@ p{margin:0 0 18px}
   .oldstyle-photo-wrap{width:46%;height:430px;right:-6px;top:66px}
   .oldstyle-orbit{width:365px;height:365px;right:-105px;top:48px}
 }
+
+/* Mobile hero banner integration */
+@media(max-width:560px){
+  .oldstyle-hero{
+    overflow:hidden;
+  }
+
+  .oldstyle-hero-copy{
+    position:relative;
+    z-index:6;
+    padding:30px 0 6px;
+  }
+
+  .oldstyle-hero-copy h1{
+    margin-bottom:16px;
+  }
+
+  .oldstyle-hero-copy .lead{
+    margin-bottom:18px;
+  }
+
+  .hero-actions{
+    margin-bottom:0;
+  }
+
+  .hero-trust{
+    margin-top:16px;
+    margin-bottom:0;
+  }
+
+  .premium-hero-visual{
+    min-height:430px;
+    margin-top:-8px;
+    overflow:hidden;
+  }
+
+  .oldstyle-orbit{
+    width:335px;
+    height:335px;
+    right:-92px;
+    top:6px;
+  }
+
+  .premium-software-frame{
+    width:90%;
+    left:-2%;
+    top:72px;
+    border-radius:12px;
+    box-shadow:0 22px 50px rgba(37,50,41,.14);
+  }
+
+  .oldstyle-photo-wrap{
+    width:42%;
+    height:355px;
+    right:-2px;
+    top:34px;
+    z-index:5;
+  }
+
+  .oldstyle-photo-wrap img{
+    object-position:bottom right!important;
+  }
+}
+
+@media(max-width:390px){
+  .premium-hero-visual{
+    min-height:400px;
+    margin-top:-4px;
+  }
+
+  .oldstyle-orbit{
+    width:305px;
+    height:305px;
+    right:-88px;
+    top:8px;
+  }
+
+  .premium-software-frame{
+    width:91%;
+    top:68px;
+  }
+
+  .oldstyle-photo-wrap{
+    width:44%;
+    height:330px;
+    top:32px;
+  }
+}
